@@ -12,5 +12,6 @@ try {
 }
 
 let db = conn.db("sample_training");
+db.collection("users").createIndex({"username": 1}, { unique: true } )
 
 export default db;
